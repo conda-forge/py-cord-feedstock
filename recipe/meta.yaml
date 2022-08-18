@@ -1,5 +1,5 @@
 {% set name = "py-cord" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/py-cord-{{ version }}.tar.gz
-  sha256: 045bf5409a657f5125cb6d66e82715e188b179af1851de37ccc0685837646336
+  sha256: 43149040431c0bc13dfc12685d5e636c15f1b9ecba2d162ecb6b22d66b3e5684
 
 build:
   number: 0
