@@ -18,15 +18,26 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
+    - setuptools >=62.6,<66
+    - setuptools-scm >=6.2,<8
   run:
     - aiohttp >=3.6.0,<3.9.0
-    - python >=3.6
+    - python >=3.8
+    - typing_extensions >=4,<5
 
 test:
   imports:
     - discord
+    - discord.types
+    - discord.sinks
+    - discord.ui
+    - discord.webhook
+    - discord.commands
     - discord.ext.commands
+    - "discord.ext.tasks
+    - "discord.ext.pages
+    - discord.ext.bridge
   commands:
     - pip check
   requires:
@@ -34,6 +45,7 @@ test:
 
 about:
   home: https://github.com/Pycord-Development/pycord
+  doc_url: https://docs.pycord.dev/
   summary: A Python wrapper for the Discord API
   license: MIT
   license_file: LICENSE
