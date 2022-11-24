@@ -35,8 +35,8 @@ test:
     - discord.webhook
     - discord.commands
     - discord.ext.commands
-    - "discord.ext.tasks
-    - "discord.ext.pages
+    - discord.ext.tasks
+    - discord.ext.pages
     - discord.ext.bridge
   commands:
     - pip check
