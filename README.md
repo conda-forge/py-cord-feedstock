@@ -9,6 +9,8 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/py-cord-feedsto
 
 Summary: A Python wrapper for the Discord API
 
+Documentation: https://docs.pycord.dev/
+
 Current build status
 ====================
 
