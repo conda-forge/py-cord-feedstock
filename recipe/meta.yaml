@@ -1,5 +1,5 @@
 {% set name = "py-cord" %}
-{% set version = "2.4.0" %}
+{% set version = "2.4.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/py-cord-{{ version }}.tar.gz
-  sha256: 2f35d92555ace5573b6349e010b4ad202603be0ab9f8afbc1d91b9cd1f203694
+  sha256: 0266c9d9a9d2397622a0e5ead09826690e688ba3cf14c470167b81e6cd2d8a56
 
 build:
   number: 0
@@ -18,12 +18,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.8,<3.12
     - setuptools >=62.6,<66
     - setuptools-scm >=6.2,<8
   run:
     - aiohttp >=3.6.0,<3.9.0
-    - python >=3.8
+    - python >=3.8,<3.12
     - typing_extensions >=4,<5
 
 test:

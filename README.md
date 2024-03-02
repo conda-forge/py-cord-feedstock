@@ -1,11 +1,11 @@
-About py-cord
-=============
+About py-cord-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/py-cord-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/Pycord-Development/pycord
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/py-cord-feedstock/blob/main/LICENSE.txt)
 
 Summary: A Python wrapper for the Discord API
 
