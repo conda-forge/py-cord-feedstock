@@ -1,0 +1,56 @@
+schema_version: 1
+
+context:
+  name: py-cord
+  version: 2.7.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: 6f947e6b08ae2884777a3fcb1150d7c0df14c4461e8015ed3d2f29c081e79dfd
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools >=62.6,<=80.9.0
+    - setuptools-scm >=9.2,<=9.2.2
+  run:
+    - python >=${{ python_min }}
+    - aiohttp >=3.6.0,<4.0
+    - typing_extensions >=4.12.0,<5
+
+tests:
+  - python:
+      imports:
+        - discord
+        - discord.types
+        - discord.sinks
+        - discord.ui
+        - discord.webhook
+        - discord.commands
+        - discord.ext.commands
+        - discord.ext.tasks
+        - discord.ext.pages
+        - discord.ext.bridge
+      pip_check: true
+      python_version: ${{ python_min }}.*
+
+about:
+  summary: A Python wrapper for the Discord API
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/Pycord-Development/pycord
+  documentation: https://docs.pycord.dev/
+
+extra:
+  recipe-maintainers:
+    - thewchan
