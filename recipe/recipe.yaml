@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: py-cord
-  version: 2.7.0
+  version: "2.7.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 6f947e6b08ae2884777a3fcb1150d7c0df14c4461e8015ed3d2f29c081e79dfd
+  sha256: 100935f37e77ba8ac1e3eff0b180e6d69bcac083de81d4c83d42327d9a2eddee
 
 build:
   number: 0
@@ -21,7 +21,7 @@ requirements:
   host:
     - pip
     - python ${{ python_min }}.*
-    - setuptools >=62.6,<=80.9.0
+    - setuptools >=77.0.3,<=80.9.0
     - setuptools-scm >=9.2,<=9.2.2
   run:
     - python >=${{ python_min }}
