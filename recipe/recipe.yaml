@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: py-cord
-  version: "2.8.0"
+  version: "2.8.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 57a7efefa80e7f6ef890fbfc054d686782c347c9e4d86fa7c91f7ae5285b353f
+  sha256: b1ebd22416941bbeccb6d26df5cbd65ff6b1d47fcbbc9652efae039e46e8a562
 
 build:
   number: 0
